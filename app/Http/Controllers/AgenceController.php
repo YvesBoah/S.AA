@@ -54,7 +54,8 @@ class AgenceController extends Controller
            
         // dd($a);
   flashy()->muted('Opération effectué avec success !', ''); 
-         return redirect()->route('Agence-Admin.index');
+         //return redirect()->route('Agence-Admin.index');
+        return redirect()->route('home');
     }
 
     /**
@@ -96,8 +97,10 @@ class AgenceController extends Controller
         'libelle_agence'=>$request->libelle_agence,
         'code_agence'=>$request->code_agence 
         ]);
-
-        return redirect()->route('Agence-Admin.index');
+        
+flashy()->muted('Opération effectué avec success !', ''); 
+        return redirect()->route('home');
+        //return redirect()->route('Agence-Admin.index');
     }
 
     /**
